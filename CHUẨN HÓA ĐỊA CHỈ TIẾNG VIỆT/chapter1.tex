@@ -1,0 +1,119 @@
+\setcounter{chapter}{0}
+\chapter{Giới thiệu đề tài }
+\section{Đặt vấn đề }
+Với sự phát triển gần đây của thương mại điện tử, bán hàng trực tuyến tại Việt Nam, việc thực hiện các đơn hàng, giao hàng nhanh đang trở thành một yếu tố quan trọng mà khách hàng dùng để đánh giá doanh nghiệp hay cửa hàng bán lẻ, shop trực tuyến. Tuy nhiên, để đảm bảo được điều này, hồ sơ đơn hàng cần được xử lý một cách nhanh chóng để có thể cung cấp cho bên vận chuyển. Một trong những thách thức lớn nhất chính là việc xác định chính xác địa chỉ từ dữ liệu nhập của người dùng. Đặc biệt trên môi trường mạng xã hội, việc cung cấp địa chỉ không đồng nhất (thường là các comment), nơi mà người dùng thường nhập trực tiếp cả địa chỉ trong một văn bản đầu vào, thay vì có một chuẩn chung, do vậy mỗi cá nhân có sự độc đáo riêng trong việc cung cấp địa chỉ của họ, và hơn nữa, có thể có sự sai sót trong quá trình nhập của người dùng khiến việc xử lý địa chỉ một cách khó khăn hơn. Việc trích xuất địa chỉ một cách tự động có thể rút gọn thời gian xử lý đơn hàng đi đáng kể và tăng tốc độ giao chuyển sản phẩm tới khách hàng. 
+
+Ngoài ra, việc chuẩn hóa được địa chỉ còn giúp ích được trong nhiều lĩnh vực khác trong nền công nghệ trực tuyến như bất động sản, xe ôm, taxi công nghệ... Trong trường hợp không thể dùng GPS để định vị hoặc, định vị GPS không chính xác. Do đó việc chuẩn hóa được địa chỉ tiếng Việt là một việc làm thiết thực và có nhiều ứng dụng trong thời kỳ công nghệ trực tuyến phát triển mạnh.
+
+\section{Mục tiêu và phạm vi của đề tài}
+\subsection{Giới thiệu bài toán}
+\begin{itemize}
+    \item Cho một văn bản tiếng Việt, bóc tách địa chỉ và chuẩn hóa để thu được các thông tin từ địa chỉ ấy sao cho các thông tin chi tiết đến mức tối đa và đúng nhất với địa chỉ trong văn bản đầu vào.
+    \item Thông tin thu được phải là một địa chỉ có thể xác định vị trí, tồn tại trên bản đồ.
+\end{itemize}
+\subsection{Phạm vi}
+\begin{itemize}
+    \item Trong phạm vi của bài toán, chỉ có thể chuẩn hóa được tiếng Việt và tối đa 1 địa chỉ cho mỗi văn bản đầu vào.
+    \item Do giới hạn về dữ liệu địa chỉ tiếng Việt, nên bài toán chỉ có thể đữ ra dữ liệu đúng đến mức đường với quận thuộcthành phố trực thuộc trung ương, ở mức xã với tỉnh trực thuộc trung ương, hoặc xã với huyện thuộc thành phố trực thuộc trung ương.
+\end{itemize}
+\section{Hướng giải quyết}
+Trong đồ án này, tôi có cài đặt thử nghiệm các phương pháp sử dụng trí tuệ nhân tạo (học máy, học sâu) và SAGEL dựa theo bài báo của các nhà phát triển Ấn Độ nhưng sử dụng trên tập dữ liệu tiếng Việt.
+\begin{itemize}
+    \item Với phương pháp trí tuệ nhân tạo, tôi coi bài toán là bài toán gán nhãn chuỗi trong lĩnh vực xử lý ngôn ngữ tự nhiên (NLP). Tôi xây dựng một tập dữ liệu gán nhãn các đơn vị trong địa chỉ tiếng Việt, sau đó tôi sử dụng CRF/ mạng LSTM-CRF để học tham số đồng thời, sau đó so sánh độ chính xác, thời gian huấn luyện, thời gian dự đoán... của từng phương pháp này.
+    \item Với phương pháp SAGEL, tôi cài đặt lại thuật toán từ ý tưởng trong bài báo \textit{SAGEL: Smart Address Geocoding Engine for Supply-Chain Logistics}, sau đó đánh giá độ chính xác dựa trên dữ liệu từ Google với một tập thử nghiệm.
+    \item Ngoài ra trong quá trình cài đặt giải thuật của phương pháp SAGEL, tôi có nhận ra một số nhược điểm của phương pháp này cho tiếng Việt, nên tôi đề xuất một phương pháp kết hợp sử dụng học máy và SAGEL, tôi gọi phương pháp này là SAGEL with Top K Results.
+\end{itemize}
+Chi tiết các phương pháp sẽ được trình bày ở các chương sau.
+
+\section{Các nghiên cứu trên thế giới}
+Một vài nghiên cứu từ các công ty lớn, hoặc các phần mềm mã nguồn mở:
+\subsection{Google API}
+ Đây là một trong những bộ chuẩn hóa địa chỉ chính xác nhất trên thế giới hiện nay. Với một đội ngũ nhà phát triển hùng hậu, tiềm năng tài chính, cũng như lượng dữ liệu khổng lồ, việc độ chính xác các thuật toán của Google là không phải bàn cãi, nhưng gần đây, Google bắt đầu tính phí cho các dịch vụ API của mình, từ đó khiến việc thử nghiệm của tôi với bài toán cũng trở nên khá khó khăn. 
+ 
+ Ngoài ra Google không công bố họ sử dụng công nghệ, thuật toán hoặc phương pháp nào trong bộ chuẩn hóa địa chỉ của mình, từ đó, khiến các công ty muốn sử dụng bộ chuẩn hóa hoặc phải sử dụng của Google API có tính phí, hoặc xây dựng một bộ chuẩn hóa của riêng mình.
+ 
+ Dưới đây là một ví dụ về bộ chuẩn hóa địa chỉ của Google API (ví dụ được lấy trên trang chủ cuả Google Maps Platform):
+ 
+  \vspace*{1cm}
+ Ví dụ với chuỗi địa chỉ in đậm dưới đây :
+ 
+\textbf{1600 Amphitheatre Parkway, Mountain View, CA 94043, USA}
+\newpage
+\begin{lstlisting}
+"address_components" : [
+        {
+          "long_name" : "1600",
+          "short_name" : "1600",
+          "types" : ["street_number"]
+        },
+        {
+          "long_name" : "Amphitheatre Pkwy",
+          "short_name" : "Amphitheatre Pkwy",
+          "types" : ["route"]
+        },
+        {
+          "long_name" : "Mountain View",
+          "short_name" : "Mountain View",
+          "types" : ["locality", "political"]
+        },
+        {
+          "long_name" : "Santa Clara County",
+          "short_name" : "Santa Clara County",
+          "types" : ["administrative_area_level_2", "political"]
+        },
+        {
+          "long_name" : "California",
+          "short_name" : "CA",
+          "types" : ["administrative_area_level_1", "political"]
+        },
+        {
+          "long_name" : "United States",
+          "short_name" : "US",
+          "types" : ["country", "political"]
+        },
+        {
+          "long_name" : "94043",
+          "short_name" : "94043",
+          "types" : ["postal_code"]
+        }
+    ]
+\end{lstlisting}
+Địa chỉ được chuẩn hóa một cách rất chi tiết, có thể cho thấy Google đã rất quan tâm phát triển hệ thống chuẩn hóa địa chỉ của mình.
+\subsection{Thư viện mã nguồn mở libpostal}
+Đây là một thư viện mã nguồn mở của tác giả có tài khoản github là \textbf{openvenues}, tác giả này có mô tả rằng, họ sử dụng machine learning hay chính xác hơn là CRF (trường điều kiện ngẫu nhiên) trên tập dữ liệu huấn luyện hơn 1 tỉ địa chỉ trên thế giới, và sử dụng dữ liệu địa chỉ từ \textbf{OpenStreetMap} và \textbf{OpenAddresses} là nguồn dữ liệu địa chỉ có cấu trúc.
+
+Trên trang github của thư viện này : \textit{https://github.com/openvenues/libpostal} có đề cập rằng thư viện có thể chuẩn hóa được địa chỉ của Tiếng Việt. Tuy nhiên độ chính xác không được cao:
+  \vspace*{0.5cm}
+
+Ví dụ với chuỗi địa chỉ : \textbf{Đường Đại Cồ Việt, quận Hai Bà Trưng, Hà Nội}
+  \vspace*{0.5cm}
+
+Khi sử dụng hàm \textbf{ parse\_address } trong package \textbf{ postal.parser } sử dụng ngôn ngữ Python trả ra kết quả :
+\begin{itemize}
+    \item  \textbf{road}: 'đường đại cồ việt quận hai bà trưng'
+    \item  \textbf{city}: 'hà nội'
+\end{itemize}
+Nhưng với địa chỉ là tiếng Anh : \textbf{The Book Club 100-106 Leonard St Shoreditch London EC2A 4RH, United Kingdom}
+
+\begin{itemize}
+    \item  \textbf{house}: 'the book club'
+    \item  \textbf{house\_number}: '100-106'
+    \item  \textbf{road}: 'leonard st'
+    \item  \textbf{suburb}: 'shoreditch'
+    \item  \textbf{city}: 'london'
+    \item  \textbf{postcode}: 'EC2A 4RH'
+    \item  \textbf{country}: 'united kingdom'
+\end{itemize}
+
+Vì địa chỉ tiếng Anh được sử dụng ở rất nhiều nước trên thế giới, nên có thể nhận thấy dữ liệu địa chỉ cho tiếng Anh cũng rất phố biến, do đó thư viện libpostal cho kết quả khá chính xác.
+\section{Bố cục đồ án}
+Đồ án được trình bày theo bố cục sau:
+\begin{itemize}
+\item \textbf{Chương 1 - Mở đầu}: giới thiệu đề tài, đặt vấn đề, mục tiêu phạm vi đề tài, định hướng giải pháp và có đưa ra một số sản phẩm hoặc nghiên cứu trên thế giới.
+\item \textbf{Chương 2 - Dữ liệu địa chỉ Việt Nam}: đặc điểm phân cấp hành chính, đặc điểm địa chỉ Việt Nam, các dữ liệu địa chỉ sử dụng trong đồ án.
+\item \textbf{Chương 3 - Cơ sở lý thuyết}: cơ sở lý thuyết về các phương pháp, công nghệ sử dụng trong đồ án.
+\item \textbf{Chương 4 - Phương pháp giải quyết}: trình bày về việc áp dụng các phương pháp với bài toán chuẩn hóa hóa địa chỉ.
+\item \textbf{Chương 5 - Đánh giá và cài đặt thử nghiệm}: trình bày về dữ liệu thử nghiệm, các kịch bản thử nghiệm, đánh giá độ chính xác của các phương pháp theo các kịch bản này.
+\item \textbf{Chương 6 - Kết luận và hướng phát triển}: Nhận xét tổng quan về đề tài, những khó khăn, thiếu sót trong đề tài cũng như phương hướng phát triển trong tương lai. 
+\end{itemize}
+\newpage 

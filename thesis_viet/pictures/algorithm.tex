@@ -1,0 +1,32 @@
+\documentclass[a4paper]{report}
+
+\usepackage[paperwidth=6in,paperheight=1.5in,margin=2pt,top=2pt,bottom=2pt,nohead]{geometry}
+\usepackage{amsmath}
+\usepackage{float}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+\floatstyle{ruled}
+\newfloat{algorithm}{htbp}{loa}
+\floatname{algorithm}{Algorithm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{algorithm}
+\caption{Gauss-Seidel Algorithm}
+
+\begin{tabbing}
+1. \=For $k=1$ to maximum number of iterations\\
+\>2. For \=$i=1$ to $n$\\
+\>\>Set
+\begin{math}
+x_i^{(k)} = \frac{b_i-\sum_{j=1}^{i-1}a_{ij}x_j^{(k)}-\sum_{j=i+1}^{n}a_{ij}x_j^{(k-1)}}{a_{ii}}
+\end{math}
+\\
+\>3. If $\|\vec{x}^{(k)}-\vec{x}^{(k-1)}\| < \epsilon$, where $\epsilon$ is a specified stopping criteria, stop.
+\end{tabbing}
+\end{algorithm}
+
+\end{document}

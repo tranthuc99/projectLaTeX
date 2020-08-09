@@ -1,0 +1,10 @@
+\begin{theglossary}
+\gloitem {cardinality}the number of objects within a set\relax
+\glodelim 
+		\glsnumformat{2}\gloskip 
+\gloitem {set}a collection of objects\relax
+\glodelim \glsnumformat{1}\gloskip 
+\gloitem {universal set}the set containing everything\relax
+\glodelim 
+		\glsnumformat{3}
+\end{theglossary}

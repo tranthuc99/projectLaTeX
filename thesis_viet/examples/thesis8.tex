@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{float}
+
+\floatstyle{ruled}
+\newfloat{algorithm}{htbp}{loa}
+\floatname{algorithm}{Algorithm}
+
+\begin{document}
+
+% Title page
+
+\title{A Sample PhD Thesis}
+\author{A. N. Other}
+\date{July 2004}
+\maketitle
+
+% switch to double spacing
+\renewcommand{\baselinestretch}{1.66}
+
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+\listof{algorithm}{List of Algorithms}
+
+\chapter*{Acknowledgements}
+
+\begin{abstract}
+\end{abstract}
+
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+\label{ch:intro}
+
+\chapter{Technical Introduction}
+\label{ch:techintro}
+
+\begin{algorithm}
+\caption{Gauss-Seidel Algorithm}
+
+\begin{tabbing}
+1. \=For $k=1$ to maximum number of iterations\\
+\>2. For \=$i=1$ to $n$\\
+\>\>Set
+\begin{math}
+x_i^{(k)} = \frac{b_i-\sum_{j=1}^{i-1}a_{ij}x_j^{(k)}-\sum_{j=i+1}^{n}a_{ij}x_j^{(k-1)}}{a_{ii}}
+\end{math}
+\\
+\>3. If $\|\vec{x}^{(k)}-\vec{x}^{(k-1)}\| < \epsilon$ where $\epsilon$ is a specified stopping criteria, stop.
+\end{tabbing}
+\end{algorithm}
+
+\chapter{Method}
+\label{ch:method}
+
+\chapter{Results}
+\label{ch:results}
+
+\chapter{Conclusions}
+\label{ch:conc}
+
+\bibliographystyle{plain}
+\bibliography{thesis}
+\addcontentsline{toc}{chapter}{\bibname}
+
+\end{document}

@@ -1,0 +1,130 @@
+% this package is designed by: thanhhungqb@gmail.com
+% more infor mation and update: https://github.com/HungTVo/thesis-template
+%
+% this package also use code from: 
+%	http://tex.stackexchange.com/questions/51483/how-to-write-abstract-and-acknowledgement-in-book-format
+% thank for Fredrik M. Kirkemo to gave a useful code
+
+\ProvidesPackage{bkthesis}
+
+\RequirePackage{graphicx}
+\RequirePackage{vietnam}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+
+\newcommand{\@sdeptname}{TRƯỜNG ĐẠI HỌC BÁCH KHOA HÀ NỘI}
+\newcommand{\csdeptname}[1]{\renewcommand{\@sdeptname}{#1}}
+
+\newcommand{\@rname}{ĐỒ ÁN TỐT NGHIỆP}
+\newcommand{\crname}[1]{\renewcommand{\@rname}{#1}}
+
+\newcommand{\@tname}{TÊN ĐỀ TÀI TỐT NGHIỆP}
+\newcommand{\ctname}[1]{\renewcommand{\@tname}{#1}}
+
+\newcommand{\@stuname}{NGUYỄN TRẦN THỨC}
+\newcommand{\cstuname}[1]{\renewcommand{\@stuname}{#1}}
+
+\newcommand{\@mailHust}{thuc.nt185483@sis.hust.edu.vn}
+\newcommand{\emailHust}[1]{\renewcommand{\@mailHust}{#1}}
+
+\newcommand{\@sCouncil}{Hệ thống thông tin quản lý}
+\newcommand{\csCouncil}[1]{\renewcommand{\@sCouncil}{#1}}
+
+\newcommand{\@sSupervise}{tên GVHD}
+\newcommand{\csSupervise}[1]{\renewcommand{\@sSupervise}{#1}}
+
+\newcommand{\@bomon}{Abc abc abc abc}
+\newcommand{\bomon}[1]{\renewcommand{\@bomon}{#1}}
+
+\newcommand{\@vien}{Toán ứng dụng và tin học}
+\newcommand{\vien}[1]{\renewcommand{\@vien}{#1}}
+
+\newcommand{\@ttime}{HÀ NỘI, 8/2022}
+\newcommand{\cttime}[1]{\renewcommand{\@ttime}{#1}}
+
+\def\coverpage{
+
+\pagestyle{empty}
+
+\begin{minipage}[b][25.5cm][t]{14.9cm}
+\begin{tikzpicture}[remember picture, overlay]
+
+\draw [line width=1pt]
+    ($ (current page.north west) + (3.0cm,-1.5cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.5cm,1.5cm) $);
+\draw [line width=3pt]
+    ($ (current page.north west) + (3.15cm,-1.65cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.65cm,1.65cm) $); 
+\end{tikzpicture}
+
+\begin{center}
+
+    {\fontsize{15}{1}\selectfont \textbf{\@sdeptname}}\\[1cm]
+\includegraphics[scale=0.2]{logoBK}\\[1cm]
+    {\fontsize{23}{1}\selectfont \textbf{\@rname}}\\[1.5cm]
+    {\fontsize{20}{25}\selectfont \textbf{\parbox[c][0pt]{14cm}{\centering \@tname}} }\\[1cm]
+    {\fontsize{14}{1}\selectfont \textbf{\@stuname} }\\[0.3cm]
+    {\fontsize{13}{1}\selectfont \@mailHust }\\[0.5cm]
+    {\fontsize{14}{1}\selectfont \textbf{\@sCouncil} }\\
+\end{center}
+
+\vspace{2cm}
+\begin{large}
+\begin{tabbing}
+\hspace{1.2cm}\= \hspace{6.5cm}\= \kill
+\> \textbf{Giảng viên hướng dẫn:} \> \@sSupervise\\
+\> \> \\
+\> \textbf{Bộ môn:} \> \@bomon \\
+\> \textbf{Viện:} \> \@vien
+
+\end{tabbing}
+\end{large}
+\vfill
+\centering
+{\large \textbf{\@ttime}}
+
+
+\end{minipage}
+\par\vfil\null\endtitlepage
+}
+
+
+\def\makeprintversion{}
+
+
+\makeatletter
+\newenvironment{detai}{
+  \titlepage
+  \null
+  \@beginparpenalty\@lowpenalty
+  \begin{center}
+
+	{\bfseries ĐỀ TÀI TỐT NGHIỆP\vspace{-.5em}\vspace{\z@}}
+	\@endparpenalty\@M
+  \end{center}}
+{\par\vfil\null\endtitlepage}
+\makeatother
+
+
+\makeatletter
+\newenvironment{acknowledgments}{
+	 \null
+	\begin{center}
+	  {\bfseries Lời cảm ơn \vspace{-.5em}\vspace{\z@}}
+	\end{center}
+  }{}
+\makeatother
+
+
+\makeatletter
+\newenvironment{declaration}{
+	\begin{center}
+	  {\bfseries Tóm tắt nội dung đồ án\vspace{-.5em}\vspace{\z@}}
+	\end{center}
+  }{\par\vfil\null\endtitlepage}
+\makeatother	  
+

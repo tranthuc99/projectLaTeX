@@ -1,0 +1,72 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[a4paper,width=15cm,top=2cm,bottom=2cm,bindingoffset=14mm]{geometry}
+
+\usepackage[utf8]{vietnam}
+\usepackage{lipsum}
+%\usepackage{showframe}
+
+\usepackage{scrextend}
+\changefontsizes[16pt]{14pt}
+
+\usepackage{mathptmx}	% same Time New Roma
+
+\usepackage{bkthesis}
+
+\csdeptname{HỌC VIỆN TÀI CHÍNH\\BỘ MÔN KINH TẾ ĐẦU TƯ TÀI CHÍNH\\---------\-*---------\-}
+\crname{TIỂU LUẬN}
+\ctname{MÔN HỌC: KINH TẾ CÁC NGÀNH SẢN XUẤT KINH DOANH}
+\cstuname{ĐỀ TÀI:}
+
+\csCouncil{ẢNH HƯỞNG CỦA KẾT CẤU HẠ TẦNG KINH TẾ XÃ HỘI ĐẾN CHUYỂN DỊCH CƠ CẤU NGÀNH KINH TẾ Ở VIỆT NAM}
+\csSupervise{\textbf{: ĐỖ THỊ HOÀI}}
+
+\usepackage[nottoc]{tocbibind}
+%--------------------------------------
+
+
+
+
+\usepackage{amsmath} % needed for command eqref
+\usepackage{amssymb} % needed for math fonts
+\usepackage[colorlinks=true,breaklinks]{hyperref}
+
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0,0,1} % blue
+\definecolor{c2}{rgb}{0,0.3,0.9} % light blue
+\definecolor{c3}{rgb}{0.3,0,0.9} % red blue
+\hypersetup{
+    linkcolor={c1}, % internal links
+    citecolor={c2}, % citations
+    urlcolor={c3} % external links/urls
+}
+\usepackage{graphicx}
+
+
+
+
+
+%--------------------------------------
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancyfoot[CE,CO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\headheight}{0.5pt}
+
+\usepackage{tocloft,calc}
+\renewcommand{\cftchappresnum}{Chương }
+\AtBeginDocument{\addtolength\cftchapnumwidth{\widthof{\bfseries Chương }}}
+
+
+
+\begin{document}
+\coverpage
+
+%\include{hoaiham}
+
+\end{document}

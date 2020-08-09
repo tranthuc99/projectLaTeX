@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{report}
+
+\begin{document}
+
+% Title page
+
+\begin{titlepage}
+\begin{center}
+\vspace*{1in}
+{\LARGE A Sample PhD Thesis}
+\par
+\vspace{1.5in}
+{\large A. N. Other}
+\par
+\vfill
+A Thesis submitted for the degree of Doctor of Philosophy
+\par
+\vspace{0.5in}
+School of Computing Sciences
+\par
+\vspace{0.5in}
+University of East Anglia
+\par
+\vspace{0.5in}
+July 2004
+\end{center}
+\end{titlepage}
+
+
+% switch to double spacing
+\renewcommand{\baselinestretch}{1.66}
+
+\pagenumbering{roman}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter*{Acknowledgements}
+
+\begin{abstract}
+\end{abstract}
+
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+\label{ch:intro}
+
+This is an example of how to use BiB\TeX.
+First of all, let's cite a book~\cite{wainwright93}
+now let's cite a journal paper and a conference proceedings~\cite{cawley96,talbot97}.
+Finally, let's cite a chapter in a book~\cite[Chapter 9]{goossens97}.
+
+\chapter{Technical Introduction}
+\label{ch:techintro}
+
+\chapter{Method}
+\label{ch:method}
+
+\chapter{Results}
+\label{ch:results}
+
+\chapter{Conclusions}
+\label{ch:conc}
+
+\bibliographystyle{plain}
+\bibliography{thesis}
+\addcontentsline{toc}{chapter}{\bibname}
+
+\end{document}

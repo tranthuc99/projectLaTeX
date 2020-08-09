@@ -1,0 +1,28 @@
+\documentclass[a4paper]{report}
+
+\usepackage{glossary}
+
+\makeglossary
+
+\begin{document}
+
+\pagenumbering{roman}
+\printglossary
+
+\chapter{Introduction}
+\pagenumbering{arabic}
+
+This is where I define the notation for a set $\mathcal{S}$
+\glossary{name=set,description=a collection of objects}.
+
+\clearpage
+
+This is where I define the cardinality of a set $n(\mathcal{S})$
+\glossary{name=cardinality,description=the number of objects within a set}
+
+\clearpage
+
+This is where I define the universal set $\mathcal{U}$
+\glossary{name=universal set,description=the set containing everything}
+
+\end{document}

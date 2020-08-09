@@ -1,0 +1,205 @@
+\usepackage[utf8x]{vietnam}
+%\usepackage{urwvn}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage{alltt}
+\usepackage{fancybox}
+\usepackage{makeidx}
+\usepackage{a4}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{a4-1in}
+\usepackage[nodayofweek]{datetime}
+\usepackage{longtable}
+\usepackage[backref,plainpages=false,pagebackref]{hyperref}
+%\usepackage{html}
+%\begin{htmlonly}
+\usepackage{url}
+%\end{htmlonly}
+\usepackage{pdfstuff}
+
+\newcommand{\basehtml}{http://theoval.cmp.uea.ac.uk/~nlct/latex}
+
+\makeindex
+
+\newcommand{\scalefac}{1}
+\newcommand{\anglerot}{0}
+
+\newcommand{\Index}[1]{#1\index{#1}}
+\newcommand{\Indextt}[1]{\texttt{#1}\index{#1@\texttt{#1}}}
+\newcommand{\indextt}[1]{\index{#1@\texttt{#1}}}
+\newcommand{\cls}[1]{\texttt{#1}\index{class file (\texttt{.cls})!#1@\texttt{#1}}}
+\newcommand{\clsopt}[1]{\texttt{#1}\index{Các lựa chọn cho class file!#1@\texttt{#1}}}
+\newcommand{\clsfiles}{\index{class file (\texttt{.cls})}}
+\newcommand{\tocfile}{\index{file của bảng mục lục (\texttt{.toc})}}
+\newcommand{\sty}[1]{\texttt{#1}\index{các gói lệnh (\texttt{.sty})!#1@\texttt{#1}}}
+\newcommand{\styfiles}{\index{các gói lệnh (\texttt{.sty})}}
+\newcommand{\bst}[1]{\texttt{#1}\index{phong cách tài liệu tham khảo(\texttt{.bst})!#1@\texttt{#1}}}
+\newcommand{\bibentry}[1]{\texttt{#1}\index{kiểu danh mục trong tài liệu tham khảo!#1@\texttt{#1}}}
+\newcommand{\bibfield}[1]{\texttt{#1}\index{kiểu điền tên cho tài liệu tham khảo!#1@\texttt{#1}}}
+\newcommand{\Com}[1]{\texttt{\textbackslash #1}\index{#1@\texttt{\textbackslash #1}}}
+\newcommand{\atCom}[1]{\texttt{\textbackslash @#1}\index{"@#1@\texttt{\textbackslash "@#1}}}
+\newcommand{\counter}[1]{\texttt{#1}\index{bộ đếm!#1@\texttt{#1}}}
+\newcommand{\indexCom}[1]{\index{#1@\texttt{\textbackslash #1}}}
+\newcommand{\indexEnv}[1]{\index{  #1@\texttt{#1} ``môi trường''}}
+\newcommand{\indexpagestyle}[1]{\texttt{#1}\index{phong cách trang!#1@\texttt{#1}}}
+\newcommand{\indexpagenumbering}[1]{\texttt{#1}\index{đánh số trang!#1@\texttt{#1}}}
+\newcommand{\leftbrace}{\latexhtml{\Indextt{\symbol{123}}}{\Indextt{\{}}}
+\newcommand{\rightbrace}{\latexhtml{\Indextt{\symbol{125}}}{\Indextt{\}}}}
+\newcommand{\pgsty}[1]{\texttt{#1}\index{phong cách trang!#1@\texttt{#1}}}
+\newcommand{\psatCom}[1]{\texttt{\symbol{92}ps@#1}\index{ps"@#1@\texttt{\symbol{92}ps"@#1}}}
+
+\newcommand{\indexSymbol}[1]{\indextt{\symbol{#1}@{\large\textbackslash\symbol{#1}}}}
+
+%LaTeX2HTML can't handle conditionals
+% so make 2 diff commands
+\newcommand{\keyword}[1]{{#1}\index{#1}}
+\newcommand{\Keyword}[2]{{#1}\index{#2}}
+
+\newcommand{\meta}[1]{\textsf{\slshape #1}}
+\newcommand{\envname}[1]{\texttt{#1}\index{#1@\texttt{#1} ``môi trường''}}
+\newcommand{\appname}[1]{\texttt{#1}}
+\newcommand{\Iappname}[1]{\appname{#1}\index{#1@\texttt{#1}}}
+\newcommand{\IAppname}[2]{\appname{#1}\index{#2@\texttt{#2}}}
+
+\newcommand{\BiBTeX}{\textsc{Bib}\TeX\index{BibTeX@\textsc{Bib}\TeX}}
+\newcommand{\PDFLaTeX}{PDF\LaTeX\index{PDFLaTeX@PDF\LaTeX}}
+
+\newenvironment{htmlcode}[1][]%
+{\par\begin{center}\begin{ttfamily}\begin{minipage}{\textwidth}}%
+{\end{minipage}\end{ttfamily}\end{center}}
+
+\newenvironment{htmlbcode}[1][]%
+{\par\begin{rawhtml}<table border><td>\end{rawhtml}\begin{center}\begin{ttfamily}\begin{minipage}{\textwidth}}%
+{\end{minipage}\end{ttfamily}\par\begin{rawhtml}</td></table>\end{rawhtml}\end{center}}
+
+\newenvironment{htmlresult}[1][]%
+{\par\vspace{10pt}\noindent\begin{makeimage}\begin{minipage}{\textwidth}}%
+{\end{minipage}\end{makeimage}\par\vspace{10pt}}
+
+\newenvironment{htmldef}[1][]%
+{\par\begin{center}\begin{ttfamily}\begin{minipage}{\textwidth}}%
+{\end{minipage}\end{ttfamily}\end{center}}
+
+\newcommand{\labelledbox}[2]{\begin{tabular}{r}\doublebox{#1}\\\scriptsize\textsf{#2}\end{tabular}}
+\newcommand{\labelled}[2]{\begin{tabular}{r}#1\\\scriptsize\textsf{#2}\end{tabular}}
+\newsavebox{\boxcontents}
+
+\newenvironment{ltxcode}[1][0.9\textwidth]%
+{\begin{lrbox}{\boxcontents}\begin{minipage}{#1}\begin{ttfamily}}%
+{\end{ttfamily}\end{minipage}\end{lrbox}\par\vspace{10pt}\centerline{\labelledbox{\usebox{\boxcontents}}{Input}}\par\noindent\vspace{10pt}}
+
+\newenvironment{ltxbcode}[1][0.9\textwidth]%
+{\begin{lrbox}{\boxcontents}\begin{minipage}{#1}\begin{ttfamily}}%
+{\end{ttfamily}\end{minipage}\end{lrbox}\par\vspace{10pt}\centerline{\labelledbox{\usebox{\boxcontents}}{Code}}\par\noindent\vspace{10pt}}
+
+\newenvironment{ltxresult}[1][0.9\textwidth]%
+{\begin{lrbox}{\boxcontents}\begin{minipage}{#1}}%
+{\end{minipage}\end{lrbox}\par\vspace{10pt}\centerline{\labelledbox{\usebox{\boxcontents}}{Output}}\par\noindent\vspace{10pt}}
+
+\newenvironment{ltxdef}[1][0.9\textwidth]%
+{\begin{lrbox}{\boxcontents}\begin{minipage}{#1}\begin{ttfamily}}%
+{\end{ttfamily}\end{minipage}\end{lrbox}\par\vspace{10pt}\centerline{\labelled{\usebox{\boxcontents}}{Định nghĩa}}\par\vspace{10pt}\noindent}
+
+\newenvironment{definition}[1][0.9\textwidth]%
+{\latexhtml{\begin{ltxdef}[#1]}{\begin{htmldef}}}%
+{\latexhtml{\end{ltxdef}}{\end{htmldef}}}
+
+%\newenvironment{code}[1][0.9\textwidth]%
+%{\latexhtml{\begin{ltxcode}[#1]}{\begin{htmlcode}}}%
+%{\latexhtml{\end{ltxcode}}{\end{htmlcode}}}
+
+\newenvironment{code}[1][0.9\textwidth]{\latex{\vspace{10pt}}\begin{htmlcode}}{\end{htmlcode}\vspace{10pt}\noindent}
+
+\newenvironment{bcode}[1][0.9\textwidth]%
+{\latexhtml{\begin{ltxbcode}[#1]}{\begin{htmlbcode}}}%
+{\latexhtml{\end{ltxbcode}}{\end{htmlbcode}}}
+
+%\newenvironment{result}[1][0.9\textwidth]%
+%{\latexhtml{\begin{ltxresult}[#1]}{\begin{htmlresult}}}%
+%{\latexhtml{\end{ltxresult}}{\end{htmlresult}}}
+
+\newenvironment{result}[1][0.9\textwidth]{\begin{htmlresult}}{\end{htmlresult}\noindent}
+
+% Need a long table for the required and optional fields (for screen format), but it's
+% confusing LaTeX2HTML.
+
+\newenvironment{FieldTabA4}
+ {\begin{table}[htbp]
+  \caption{Các mục yêu cầu và lựa chọn}\label{tab:reqopt}
+  \begin{center}
+  \begin{tabular}{lp{0.4\textwidth}p{0.4\textwidth}}
+  \bfseries{Loại danh mục} & \bfseries{Các mục yêu cầu} & \bfseries{Các mục lựa chọn}\\
+ }
+ {
+  \end{tabular}
+  \end{center}
+  \end{table}
+ }
+
+\newenvironment{FieldTabScr}
+ {\newpage\begin{longtable}{lp{0.4\textwidth}p{0.4\textwidth}}
+  \caption{Các mục yêu cầu và lựa chọn}\label{tab:reqopt}\\
+  \bfseries{Loại danh mục} & \bfseries{Các mục yêu cầu} & \bfseries{Các mục lựa chọn}\\
+  \endfirsthead
+  \caption*{Các mục yêu cầu và lựa chọn tiếp theo.}\\
+  \bfseries{Loại danh mục} & \bfseries{Các mục yêu cầu} & \bfseries{Các mục lựa chọn}\\
+  \endhead
+  \endfoot
+ }
+ {\end{longtable}}
+
+\newenvironment{FieldTab}
+ {\ifscreen\begin{FieldTabScr}\else\begin{FieldTabA4}\fi}
+ {\ifscreen\end{FieldTabScr}\else\end{FieldTabA4}\fi}
+
+\newenvironment{fieldtab}{\latexhtml{\begin{FieldTab}}{\begin{FieldTabA4}}}{\latexhtml{\end{FieldTab}}{\end{FieldTabA4}}}
+
+\newcommand{\downloadurl}{\basehtml/thesis/examples}
+
+\newcommand{\download}[1]{\htmladdnormallink{download}{\downloadurl/#1.tex}}
+\newcommand{\downloadorview}[1]{\htmladdnormallink{download}{\downloadurl/#1.tex} or 
+\htmladdnormallink{view}{\downloadurl/#1.html}}
+
+%\begin{latexonly}
+\newcommand{\modification}[1]{\underline{\ttfamily #1}}
+%\end{latexonly}
+\begin{htmlonly}
+\newcommand{\modification}[1]{\underline{\em\ttfamily\large #1}}
+\end{htmlonly}
+
+\newcommand{\packageurl}{\basehtml/packages}
+\newcommand{\packagecls}[1]{\htmladdnormallink{\cls{#1}}{\packageurl/index.html\##1}}
+\newcommand{\packagesty}[1]{\htmladdnormallink{\sty{#1}}{\packageurl/index.html\##1}}
+
+\newcommand{\startmenu}[1]{\centerline{{\cmss Start $\rightarrow$ Programs $\rightarrow$ #1}}}
+\newcommand{\menu}[1]{{\cmss #1}}
+
+\newenvironment{inlinedef}{\begin{ttfamily}}{\end{ttfamily}}
+%\begin{latexonly}
+\newcommand{\TeXarchive}{\TeX\ Archive~\cite{texarchive}\index{TeX Archive@\TeX\ Archive}}
+%\end{latexonly}
+\begin{htmlonly}
+\newcommand{\TeXarchive}{\htmladdnormallink{\TeX\ Archive}{http://www.tex.ac.uk/}\index{TeX Archive@\TeX\ Archive}}
+\end{htmlonly}
+
+\newcommand{\novices}[1]{\htmladdnormallink{\LaTeX\ for Complete Novices}{\basehtml/novices/#1.html}\latex{~\cite{novices}}}
+
+\renewcommand{\vec}[1]{\boldsymbol{#1}}
+
+\font\cmr=cmr10
+\font\cmss=cmss10
+\font\cmtt=cmtt10
+
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\e}{\mathrm{e}}
+
+\newcommand{\latexbook}{the \LaTeX\ user's guide~\cite{lamport94}}
+\newcommand{\Latexbook}{The \LaTeX\ user's guide~\cite{lamport94}}
+\newcommand{\latexcomp}{\emph{The \LaTeX\ Companion}~\cite{goossens94}}
+\newcommand{\latexguide}{\emph{A Guide to \LaTeX}~\cite{kopka95}}
+
+\pagecolor[gray]{0.8}
+\latex{\pagecolor{white}}

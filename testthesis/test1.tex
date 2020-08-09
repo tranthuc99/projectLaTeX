@@ -1,0 +1,140 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[a4paper,width=15cm,top=2cm,bottom=2cm,bindingoffset=14mm]{geometry}
+
+\usepackage[utf8]{vietnam}
+\usepackage{lipsum}
+%\usepackage{showframe}
+
+\usepackage{scrextend}
+\changefontsizes[15pt]{13pt}
+
+\usepackage{mathptmx}	% same Time New Roma
+
+\usepackage{bkthesis}
+\crname{TIỂU LUẬN}
+\ctname{MÔN HỌC: KINH TẾ CÁC NGÀNH SẢN XUẤT KINH DOANH}
+\csSupervise{PGS. TS. Phạm Văn ABC}
+
+\usepackage[nottoc]{tocbibind}
+%--------------------------------------
+
+
+
+
+\usepackage{amsmath} % needed for command eqref
+\usepackage{amssymb} % needed for math fonts
+\usepackage[colorlinks=true,breaklinks]{hyperref}
+
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0,0,1} % blue
+\definecolor{c2}{rgb}{0,0.3,0.9} % light blue
+\definecolor{c3}{rgb}{0.3,0,0.9} % red blue
+\hypersetup{
+    linkcolor={c1}, % internal links
+    citecolor={c2}, % citations
+    urlcolor={c3} % external links/urls
+}
+\usepackage{graphicx}
+
+
+
+
+
+%--------------------------------------
+\usepackage{fancyhdr}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhead[LE,RO]{\textbf{\thepage}}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+\fancyfoot[CE,CO]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\headheight}{0.5pt}
+
+\usepackage{tocloft,calc}
+\renewcommand{\cftchappresnum}{Chương }
+\AtBeginDocument{\addtolength\cftchapnumwidth{\widthof{\bfseries Chương }}}
+
+\begin{document}
+\coverpage
+
+\pagenumbering{roman}
+\begin{detai}
+
+Biểu mẫu của Đề tài/khóa luận tốt nghiệp theo qui định của viện, tuy nhiên cần đảm bảo giáo viên giao đề tài ký và ghi rõ họ và tên.
+
+Trường hợp có 2 giáo viên hướng dẫn thì sẽ cùng ký tên. \\
+\vspace{14cm}
+\begin{tabbing}
+\hspace{9cm}\=\kill
+ ~ \> {\large Giáo viên hướng dẫn}\\
+ \hspace{9.5cm}\=\kill
+ ~ \> Ký và ghi rõ họ tên
+\end{tabbing} 
+\end{detai}
+
+\begin{acknowledgments}
+Đây là mục tùy chọn, nên viết phần cảm ơn ngắn gọn, tránh dùng các từ sáo rỗng, giới hạn trong khoảng 100-150 từ.
+\end{acknowledgments}
+
+\begin{declaration}
+Tóm tắt nội dung của đồ án tốt nghiệp trong khoảng tối đa 300 chữ. Phần tóm tắt cần nêu được các ý: vấn đề cần thực hiện; phương pháp thực hiện; công cụ sử dụng (phần mềm, phần cứng…); kết quả của đồ án có phù hợp với các vấn đề đã đặt ra hay không; tính thực tế của đồ án, định hướng phát triển mở rộng của đồ án (nếu có); các kiến thức và kỹ năng mà sinh viên đã đạt được.\\
+\vspace{12cm}
+\begin{tabbing}
+\hspace{9cm}\=\kill
+ ~ \> {\large Sinh viên thực hiện}\\
+ \hspace{9.4cm}\=\kill
+ ~ \> Ký và ghi rõ họ tên
+\end{tabbing}
+\end{declaration}
+
+\tableofcontents
+\par\vfil\null\endtitlepage
+\listoffigures
+\par\vfil\null\endtitlepage
+\listoftables
+
+\pagestyle{fancy}
+\input{content/ch_1}
+\input{content/ch_2}
+\input{content/ch_3}
+\chapter{ch4}
+\section{sec1}
+\lipsum
+\section{sec2}
+\lipsum
+\section{sec3}
+\lipsum
+\chapter{ch5}
+\section{sec1}
+\lipsum
+\section{sec2}
+\lipsum
+\chapter{ch6}
+\section{sec1}
+\lipsum
+\section{sec2}
+\lipsum
+\chapter{ch7}
+\section{sec1}
+\lipsum
+\section{sec2}
+\lipsum
+\chapter{chương3}
+\section{sec2}
+\lipsum
+\section{sec2}
+\lipsum
+\chapter{chương2}
+\lipsum
+\chapter*{chương3}
+\lipsum
+
+Tiep Vu \textit{et. al.}\cite{knuthwebsite,vu2016histopathological}
+Thức Trần \cite{einstein,vu2015dfdl}
+\bibliographystyle{IEEEtran}
+\bibliography{literature/refs}
+
+\end{document}

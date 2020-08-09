@@ -1,0 +1,161 @@
+\setcounter{chapter}{1}
+\chapter{Dữ liệu địa chỉ Việt Nam}
+% Các đơn vị trong địa chỉ của tiếng Việt hầu hết đều dựa trên phân cấp hành chính Việt Nam. Trong lịch sử, phân cấp hành chính Việt Nam có nhiều thời kì khác nhau, nhưng trong phạm vi của bài toán, tôi sử dụng phân cấp hành chính được quy định trong Điều 110 Hiến pháp 2013 và Điều 2 Luật Tổ chức chính quyền địa phương.
+Địa chỉ là tập hợp các thông tin, thường có hình thức biểu diễn cố định, nhằm miêu tả vị trí của một tòa nhà, một căn hộ, hay một cấu trúc hoặc một diện tích đất nào đó. Địa chỉ thường sử dụng đường biên giới chính trị và tên phố để miêu tả, cùng với các thông tin nhận dạng khác như số nhà hoặc số căn hộ. Một số địa chỉ còn chứa một số loại mã để giúp các cơ quan phụ trách vận chuyển và thư từ dễ tìm kiếm như mã ZIP và mã bưu chính. Địa chỉ thông thường dựa trên các phân cấp hành chính của quốc gia.
+\section{Phân cấp hành chính Việt Nam}
+Phân cấp hành chính Việt Nam là sự phân chia các đơn vị hành chính của Việt Nam thành từng tầng, cấp theo chiều dọc. Theo đó cấp hành chính ở trên (cấp trên) sẽ có quyền quyết định cao hơn, bắt buộc đối với cấp hành chính ở dưới (hay cấp dưới).
+
+Phân cấp hành chính Việt Nam theo Điều 110 Hiến pháp 2013 và Điều 2 Luật Tổ chức chính quyền địa phương gồm 3 cấp hành chính là:
+\begin{itemize}
+    \item Cấp Tỉnh, gồm: Tỉnh/ Thành phố trực thuộc trung ương
+    \item Cấp Huyện, gồm: Quận/ Huyện/ Thị xã/ Thành phố thuộc tỉnh/ Thành phố thuộc thành phố trực thuộc trung ương
+    \item Cấp Xã, gồm: Xã/ Phường/ Thị trấn
+\end{itemize}
+\newpage
+\begin{center}
+\begin{tikzpicture}
+\tikzset{edge/.style = {->,> = latex}}
+  \node (n1) at (-3,0) {Việt Nam};
+  \node (n2) at (-7,-2)  {Thành phố trực thuộc trung ương};
+  \node (n3) at (1,-2)  {Tỉnh};
+  \node (n4) at (-8.5,-4) {Thành phố thuộc TPTTTW};
+  \node (n13) at (-4.5,-4) {Quận};
+  \node (n6) at (-2.5,-4) {Thị xã};
+  \node (n7) at (-0.5,-4) {Huyện};
+  \node (n8) at (3.3,-4) {Thành phố trực thuộc Tỉnh};
+  \node (n14) at (-6,-6) {Phường};
+  \node (n10) at (-2,-6)  {Xã};
+  \node (n11) at (2,-6)  {Thị trấn};
+  \foreach \from/\to in {n1/n2,n1/n3,n2/n4,n2/n13,n3/n6,n2/n6,n3/n7,n3/n8,n2/n7,n4/n14,n13/n14,n6/n14,n8/n14,n6/n10,n7/n10,n8/n10,n7/n11}
+    \draw[edge](\from) -- (\to);
+\end{tikzpicture}    
+
+\vspace*{1cm}
+\textbf{Hình 1. } \textit{Phân cấp hành chính Việt Nam}
+\end{center}
+
+Ngoài ra còn có Đơn vị hành chính - kinh tế đặc biệt do Quốc hội thành lập (còn được  gọi là đặc khu) là đơn vị hành chính thuộc tỉnh, do Quốc hội quyết định thành lập, có cơ chế, chính sách đặc biệt về phát triển kinh tế - xã hội, có tổ chức chính quyền địa phương và cơ quan khác của Nhà nước tinh gọn, bảo đảm hoạt động hiệu lực, hiệu quả.
+
+Ở dưới các đơn vị hành chính trong \textbf{hình 1} là cấp cơ sở không pháp nhân, phục vụ cho quản lý dân cư nhưng không được xem là cấp hành chính, và những người tham gia quản lý hoạt động ở cấp này chỉ hưởng phụ cấp công tác mà không được coi là công chức.
+\begin{itemize}
+    \item Dưới xã có làng/ thôn/ bản/ buôn/ sóc/ấp.., khi lượng dân cư đông thì thôn làng dưới xã có thể chia ra các xóm.
+    \item Dưới phường/thị trấn có khu dân cư/khu phố/khu vực/khóm/ấp, khi lượng dân cư đông, khu dân cư ở phường/thị trấn thì chia ra tổ dân phố, dưới tổ dân phố còn chia ra cụm dân cư.
+\end{itemize}
+\section{Địa chỉ Việt Nam}
+Địa chỉ ở Việt Nam thường theo địa hạt hành chính. Việc sử dụng mã bưu chính hay mã ZIP không thật sự phổ biến.
+Định dạng của địa chỉ ở Việt Nam cách mới gồm các phần:
+
+\vspace*{0.5cm}
+\textbf{Phần số nhà và tên đường}
+
+Phần số nhà và tên đường được ghi theo quy định ở Quyết định số 05/2006/QĐ-BXD ngày 08 tháng 03 năm 2006. Định dạng phổ biến nhất như sau:
+\begin{itemize}
+    \item Chỉ gồm số nhà và tên đường, ví dụ: 123 đường Lê Lợi. Đây là định dạng cơ bản và phổ biến nhất.
+    \item Số nhà có thể thêm các ký tự ở cuối: 123A đường Lê Lợi, hoặc 123B đường Lê Lợi. Trường hợp này là do khu đất trước kia là số 123, nhưng sau đó mới được tách làm 2 căn nhà có 2 địa chỉ khác nhau.
+    \item Nếu nhà trong hẻm thì có thêm dấu gạch chéo: 123/3 đường Lê Lợi. Trong đó, 123 là địa chỉ của con hẻm, còn 3 là số nhà trong con hẻm đó.
+    \item Trong hẻm cũng có quy tắc đặt tên giống số nhà và có thể có hẻm con, ví dụ: 123/3E đường Lê Lợi, hoặc 123/3/5B đường Lê Lợi.
+    
+Một cách khác là ở các khu gọi là cư xá. Trong cư xá sẽ có đường và số nhà kèm theo, quy tắc đặt tên sẽ là:
+    \item Bao gồm cả số nhà, đường và tên cư xá, ví dụ: 123 đường số 4 cư xá Bình Thới.
+\end{itemize}
+
+% \vspace*{0.3cm}
+\textbf{Phần tên thôn/ấp}
+
+Trường hợp không có số nhà và đường, phần đầu bao gồm tên thôn/ấp, một số nơi còn kèm theo tên đội. Ví dụ: Đội 2 thôn Phú Lợi, hoặc ấp Thái Hòa.
+
+Như vậy, một thôn/ấp sẽ có nhiều nhà có cùng địa chỉ. Nhưng điều này vẫn không phải trở ngại lớn khi gửi thư, vì người dân ở các thôn/ấp này đều đa phần là biết nhau, nên chỉ cần hỏi tên người là xác định được.
+
+Hiện vẫn chưa có cách đặt địa chỉ nào chính xác hơn cho trường hợp này.
+\textbf{Phần phân cấp hành chính Việt Nam}
+
+Phần này được xác định theo phân cấp hành chính Việt Nam gồm 3 cấp : xã, huyện, tỉnh (như đề cập ở mục \textbf{2.1})
+
+Tên nước thường không được bao gồm khi gửi trong nội bộ Việt Nam.
+
+Ngoài ra ở các quận tại Việt Nam, một đường có thể thuộc nhiều phường khác nhau và vì diện tích của một đường (tại các quận) không lớn, kết hợp với số  được đánh theo dạng chẵn/lẻ tại hai bên đường, có thể xác định được vị trí của địa điểm dễ dàng hơn phường, vốn khá rộng và không được đánh số. Do tính phân loại không cao, nên phường thông thường có thể không cần đưa vào chuỗi địa chỉ tiếng Việt.
+
+\vspace*{0.5cm}
+\textbf{Ví dụ về một địa chỉ tiếng Việt:} "Đại học Bách Khoa Hà Nội, số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội"
+
+\begin{itemize}
+    \item Đại học Bách Khoa Hà Nội : Địa điểm, tòa nhà, khu đất
+    \item Số 1 : Số của đường
+    \item Đại Cồ Việt : Đường, phố
+    \item Hai Bà Trưng : Quận
+    \item Hà Nội : Thành phố
+\end{itemize}
+
+\section{Dữ liệu dùng trong bài toán}
+
+Trong bài toán này, tôi sử dụng nhiều loại dữ liệu khác nhau, mỗi loại được sử dụng trong một phương pháp. Tôi xin chân thành cảm ơn TS. Trần Việt Trung đã giúp đỡ tôi trong việc tìm kiếm và thu thập bộ dữ liệu phục vụ trong bài toán. Dữ liệu này được chia làm 2 loại.
+
+\subsection{Dữ liệu huấn luyện cho phương pháp sử dụng trí tuệ nhân tạo}
+Trong phạm vi của đồ án lần này, tôi sử dụng hai mô hình cho bài toán gán nhãn từ loại trên cùng một tập dữ liệu, đó là :
+\begin{itemize}
+    \item CRF : một mô hình phổ biến cho bài toán sequence labeling nói chung và bài toán nhận dạng thực thể có tên (Named Entity Recognition - Nhận dạng thực thể có tên), ưu điểm thời gian huấn luyện ngắn, không cần số lượng lớn dữ liệu huấn luyện.
+    \item Mạng Bi-LSTM-CRF : là một mô hình học sâu (deep learning) nổi bật hiện nay, tôi lựa chọn phương pháp này từ ý tưởng bài viết trên \textbf{medium} của \textit{Zalo TechBlog : Nhận diện tên riêng (NER) với Bidirectional Long Short-Term Memory và Conditional Random Field}.
+\end{itemize}
+
+Về dữ liệu huấn luyện, gồm 2 dạng chính:
+\begin{itemize}
+    \item Dữ liệu chỉ chứa chuỗi địa chỉ cần được chuẩn hóa, theo cấu trúc địa chỉ Việt Nam, có tiền tố chỉ đơn vị như đường, quận, huyện,... có thể được viết theo một thứ tự chuẩn theo quy định - \textbf{dữ liệu địa chỉ có cấu trúc}
+    
+    Ví dụ : Đường Đại Cồ Việt, quận Hai Bà Trưng, Hà Nội
+    \item Dữ liệu từ mạng xã hội facebook : được thu thập từ các trang bán, hàng ngoài chứa chuỗi địa chỉ, văn bản còn chứa những từ ngữ cảm thán, danh từ, động từ,... hoặc các trường trong chuỗi địa chỉ không sắp xếp theo thứ tự thông thường, không có ngăn cách giữa các đơn vị nhưng vẫn đảm bảo rằng người đọc có thể hiểu được - \textbf{dữ liệu địa chỉ không có cấu trúc}
+    
+    Ví dụ : Ship cho mjnh đến 2 Đại Cồ Việt nha !
+\end{itemize}
+Trong phạm vi của đồ án lần này, tôi sẽ chỉ ra ưu nhược điểm của các phương pháp với từng loại dữ liệu (có cấu trúc và không có cấu trúc)
+
+\newpage
+\subsection{Dữ liệu cho phương pháp Sagel}
+Trong chương này, tôi chỉ tập trung vào giới thiệu dữ liệu tôi sử dụng cho bài toán mà không tập trung vào việc tôi sử dụng dữ liệu đó như thế nào. Việc sử dụng dữ liệu đó sẽ được tôi đề cập trong các chương sau.
+
+Để có thể giải quyết bài toán Address Parser, Sagel yêu cầu có 1 bộ dữ liệu địa chỉ chuẩn và thuật toán của họ tập trung vào việc chuẩn hóa theo bộ dữ liệu chuẩn này.
+
+Nhân đây tôi xin cảm ơn T.S Trần Việt Trung đã hỗ trợ tôi trong việc thu thập bộ dữ liệu địa chỉ chuẩn tiếng Việt, nguồn trên website batdongsan.com.vn, giúp tôi có thể cài đặt thử nghiệm giải thuật theo phương pháp Sagel.
+
+Bộ dữ liệu địa chỉ chuẩn này, gồm các phân cấp như \textbf{ Hình 1.}\textit{ Phân cấp hành chính Việt Nam}, tuy nhiên có bổ sung thêm mức đường. Hơn nữa, tại mỗi mức phân cấp, bộ dữ liệu không chia ra thành từng phân cấp nhỏ hơn mà coi chung là một. 
+
+Gồm các mức như sau:
+\begin{itemize}
+    \item \textbf{ward} : gồm xã, phường, thị trấn
+    \item \textbf{district} : gồm quận, huyện, thị xã, thành phố trực thuộc tỉnh
+    \item \textbf{city} : tỉnh, thành phố trực thuộc trung ương
+\end{itemize}
+
+Ngoài ra có mức \textbf{street}, không nằm trong phân cấp hành chính, nhưng thường xuất hiện trong địa chỉ nói chung và địa chỉ tiếng Việt nói riêng.
+
+Cây địa chỉ tôi dựng được từ bộ dữ liệu chuẩn có dạng như sau:
+\begin{center}
+\begin{tikzpicture}
+\tikzset{edge/.style = {->,> = latex}}
+  \node (n1) at (-3,0) {city};
+  \node (n2) at (-3,-2)  {district};
+  \node (n3) at (-5,-4)  {street};
+  \node (n4) at (-1,-4)  {ward};
+  \foreach \from/\to in {n1/n2, n2/n3, n2/n4}
+    \draw[edge](\from) -- (\to);
+\end{tikzpicture}    
+
+\vspace*{1cm}
+\textbf{Hình 2. } \textit{Cây địa chỉ từ dữ liệu chuẩn tại batdongsan.com.vn}
+\end{center}
+
+So với dữ liệu của phương pháp Sagel với địa chỉ Ấn Độ, họ sử dụng thêm một số trường như : building, zip code, lat long, short name, ... Phần lớn các trường trong đó đều không quá phổ biến trong địa chỉ tiếng Việt, ngoài ra cũng do hạn chế về mặt dữ liệu nên tôi chỉ có thể chuẩn hóa dựa trên cây địa chỉ ở trên. 
+
+Một đặc điểm về  cây địa chỉ là Sagel không đưa số nhà vào trong cây địa chỉ. Trong bài báo họ không đưa lý do, nhưng cá nhân tôi cho rằng có thể do mức độ phân tách không cao, dễ gây nhiễu. 
+
+Ví dụ : Số 1 Đường X, thì đường X mang tính phân loại cao hơn với giải thuật của họ, còn số 1 thì đều xuất hiện trên tất cả các con đường. 
+
+Sau khi chuẩn hóa thì đầu ra bài toán của tôi dưạ trên tổ hợp các đơn vị của cây địa chỉ có thể có là :
+
+\begin{itemize}
+    \item street - district - city
+    \item ward - district - city
+\end{itemize}
+
+Một số thông tin đi kèm trong chuỗi địa chỉ thì tôi có thể dùng luật để bóc tách ra ngoài các trường nêu trên.
+
+Chi tiết về giải thuật tôi cài đặt thử nghiệm sẽ được đề cập ở chương 4.

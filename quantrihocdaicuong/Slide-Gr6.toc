@@ -1,0 +1,12 @@
+\beamer@sectionintoc {1}{Tìm hiểu về nhà quản trị Tim Cook}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Tiểu sử}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Sự nghiệp}{6}{0}{1}
+\beamer@sectionintoc {2}{Khái niệm nhà quản trị}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{Định nghĩa quản trị}{13}{0}{2}
+\beamer@subsectionintoc {2}{2}{Quản trị học mang tính khoa học hay nghệ thuật}{17}{0}{2}
+\beamer@subsectionintoc {2}{3}{Phân biệt quản trị, quản lý và lãnh đạo}{20}{0}{2}
+\beamer@sectionintoc {3}{Những kỹ năng mà nhà quản trị cần có}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Khái niệm về kỹ năng quản trị}{25}{0}{3}
+\beamer@subsectionintoc {3}{2}{Các kỹ năng nhà quản trị cần phải có}{26}{0}{3}
+\beamer@subsectionintoc {3}{3}{Tim Cook: Tổng giám đốc công ty Apple.Inc và những kỹ năng quản trị}{31}{0}{3}
+\beamer@sectionintoc {4}{Những tố chất tạo nên một nhà quản trị}{42}{0}{4}

@@ -1,0 +1,8 @@
+\frametitle{Citation}
+	
+	See~[\cite{Rosen2011}] (using \verb+\cite+ command), which is also
+	
+	\fullcite{Rosen2011}
+	
+	(using \verb+\fullcite+ command).
+	

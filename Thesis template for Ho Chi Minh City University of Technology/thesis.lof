@@ -1,0 +1,56 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ảnh hưởng sau khi tăng chỉnh sáng\relax }}{3}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ứng dụng mô hình CNN trong phát hiện hướng nhìn\relax }}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Bảng thống kê kết quả\relax }}{4}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Xử lý đầu vào\relax }}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Hình ảnh được đưa qua mạng học sâu để xử lý\relax }}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Bảng thống kê kết quả\relax }}{6}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Chúng tôi tạo ra một số lượng lớn các hình ảnh photorealistic của mắt bằng cách sử dụng một mô hình vùng mắt động.\relax }}{7}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Tổng quan về quá trình chuẩn bị mô hình.\relax }}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Mô hình mắt và mô hình đầu (3D).\relax }}{8}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Vị trí máy ảnh.\relax }}{8}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Sự biến đổi từ việc thay đổi ánh sáng được mô hình hóa với ảnh chụp có môi trường có phạm vi năng động cao.\relax }}{9}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Ước lượng lỗi trên MPIIGaze\relax }}{9}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Ví dụ về độ phù hợp (fits) với SynthesEyes eye-CLNF\relax }}{9}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Biểu đồ hiệu suất trên MPIIGaze\relax }}{10}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Sử dụng phương pháp tiếp cận hàng xóm gần nhất(nearest-neighbor approach) để ước lượng cái nhìn.\relax }}{10}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Hình ảnh về lưới mắt: (a) được hiển thị với các vật liệu dựa trên vật lý và các hiệu ứng khúc xạ, mô hình co rút đồng tử (b) và giãn nở (c).\relax }}{11}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Mô hình khúc xạ iris bằng cách thay đổi kết cấu tra cứu: Một điểm ảnh được xem khúc xạ chính xác để hiển thị màu đen (tròng mắt) thay vì màu xanh (bề mặt hình học).\relax }}{11}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Mô hình khởi tạo vùng mắt: (a) Cho thấy cấu trúc liên kết vùng mắt chung của chúng ta (229 đỉnh) trên một quét thô (khoảng 5M đỉnh). (b) Cho thấy cấu trúc liên kết trong không gian kết cấu uv với các vòng cạnh quan trọng được đánh dấu.\relax }}{11}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Kết quả của phương pháp tổng hợp những hình ảnh cận cảnh thực tế (Nearest-neighbour pairs) được dán nhãn hoàn hảo của mắt người \relax }}{12}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Lỗi pixel và điểm nhìn của phương pháp nearest-neighbor tương ứng với tập UnityEyes và MPIIGaze. Nhóm nguyên cứu đạt được lỗi thấp nhất ở 1.4 triệu hình ảnh.\relax }}{12}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Đặc trưng - Feature trong CNN \cite {cnn}\relax }}{14}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Bộ lọc trong CNN \cite {cnn}\relax }}{15}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Tầng Convolution trong CNN \cite {tangconv}\relax }}{15}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ví dụ mẫu tính toán tích chập \cite {cnn}\relax }}{15}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Max Pooling trong CNN \cite {maxpool}\relax }}{17}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Các hàm truyền trong CNN \cite {softmax} \relax }}{17}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Tầng kết nối đầy đủ \cite {fullconnect} \relax }}{18}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Kiến trúc mạng CNN cơ bản \cite {mangcnn} \relax }}{19}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Nhận diện hình ảnh với CNN \cite {ptha} \relax }}{19}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Mô hình mạng LeNet \cite {lenet5}\relax }}{22}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Mạng AlexNet \cite {lenet5}\relax }}{23}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Mô hình mạng GoogLeNet \cite {gglenet}\relax }}{25}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Module Inception \cite {renset}\relax }}{25}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Một block ResNet \cite {renset}\relax }}{26}{figure.caption.43}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Một số khái niệm trong TensorFlow \cite {tensor}\relax }}{28}{figure.caption.44}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Camera Video thông thường và Camera hồng ngoại có đèn LED hồng ngoại. \cite {eyetrackingapplication}\relax }}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Phân loại sự vận động của mắt \cite {AReviewandAnalysisofEyeGazeEstimation}\relax }}{30}{figure.caption.46}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Mối quan hệ giữa hướng nhìn và tư thế đầu \cite {AReviewandAnalysisofEyeGazeEstimation}\relax }}{31}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Sơ đồ của một hệ thống theo dõi hướng nhìn. P là đồng tử của bóng mắt người và G là vị trí phản chiếu được hình thành trên giác mạc, được chụp trên mặt phẳng camera Hình ảnh này cho thấy lỗi trong ước tính ánh nhìn cũng như độ lệch giữa các vị trí nhìn thực tế và ước tính. \cite {AReviewandAnalysisofEyeGazeEstimation}\relax }}{31}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Mô hình 3D: a. Mô hình bóng mắt người, thông số mắt và các yếu tố thiết lập được sử dụng trong theo dõi mắt 3D. Trục quang được hiển thị như là đường thẳng nối giữa tâm của giác mạc với trung tâm đồng tử mắt. Trục thị giác đi qua fovea và tâm của đường cong giác mạc. Góc Kappa là độ lệch góc giữa trục quang và thị giác. b. Một mô hình phi cầu của giác mạc, như một bề mặt của chuyển đổi về trục quang của mắt. \cite {AReviewandAnalysisofEyeGazeEstimation} \relax }}{31}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Phương pháp dựa trên hình dạng: Mẫu của một vùng mắt: Xc, Yc, Ye đại diện cho trung tâm của đồng tử và mắt tương ứng P1 và P2 là tiêu điểm của hai phần parabol và a, b, c và là tham số, r là bán kính của đồng tử \cite {AReviewandAnalysisofEyeGazeEstimation}\relax }}{32}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Tập dữ liệu ảnh MPIIFaceGaze.\relax }}{32}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Tập dữ liệu ảnh GazeCaptureEyeTracking: thư mục frames chứa các file hình ảnh, và các file Json.\relax }}{33}{figure.caption.52}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Tập dữ liệu ảnh GazeCaptureEyeTracking: các file hình ảnh trong thư mục frames.\relax }}{33}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Các hướng nhìn \cite {9direction}\relax }}{34}{figure.caption.54}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Mô hình CNNs sử dụng training tập dữ liệu GazeCaptureEyeTracking.\relax }}{35}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Mô hình (model) thực hiện phát hiện ánh nhìn\relax }}{36}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Kết quả nhận được tập ảnh chứa các hình ảnh cắt mắt phải, trái\relax }}{36}{figure.caption.57}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Kết quả thu được (dữ liệu ảnh MPIIFaceGaze).\relax }}{37}{figure.caption.58}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Tập dữ liệu ảnh MPIIFaceGaze.\relax }}{37}{figure.caption.59}%
+\addvspace {10\p@ }

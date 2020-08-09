@@ -1,0 +1,28 @@
+\contentsline {chapter}{\numberline {1}Các bước thực hiện phát triển chương trình}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Xác định bài toán}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Dữ liệu đầu vào}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Dữ liệu đầu ra}{2}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Cơ sở toán học}{2}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Ma trận chéo trội, chuẩn của ma trận}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Điều kiện hội tụ tới nghiệm đúng}{3}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Phương pháp lặp đơn}{3}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Sai số phương pháp}{3}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Ý tưởng giải quyết bài toán}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Thiết kế bằng phương pháp tinh chỉnh dần từng bước}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Cài đặt chương trình theo thuật toán}{4}{subsection.1.3.2}%
+\contentsline {chapter}{\numberline {2}Phương pháp tinh chỉnh từng bước}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Module hóa bài toán - thiết kế kiểu top-down}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Chi tiết hóa dần Module}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Module: Phương pháp lặp đơn}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Module: Phương pháp lặp Seidel}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Module: Nhập ma trận}{9}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Module: Xuất kết quả}{10}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Module: Tìm chuẩn của ma trận}{11}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Module: Kiểm tra tính chéo trội của ma trận}{12}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Module: Tìm nghiệm gần đúng với sai số cho trước}{13}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Module: Biến đổi ma trận về dạng: $x = Tx + c$}{14}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Module: Tính sai số}{15}{subsection.2.2.9}%
+\contentsline {chapter}{\numberline {3}Đánh giá kết quả thu được}{16}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tính đúng đắn của kết quả}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Đánh giá về phong cách lập trình}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Hình ảnh kết quả thu được}{16}{section.3.3}%

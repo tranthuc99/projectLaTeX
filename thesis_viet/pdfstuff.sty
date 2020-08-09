@@ -1,0 +1,103 @@
+\RequirePackage{backrefx}
+\RequirePackage{ifpdf}
+\RequirePackage{ifthen}
+
+\ifpdf
+\DeclareGraphicsExtensions{.pdf,.png}
+\hypersetup{colorlinks=true}
+
+\pdfinfo{
+   /Author (Nicola Talbot
+   Vietnamese translation by Thái Phú Khánh Hòa)
+   /Title  (Thiết kế luận văn tốt nghiệp bằng LaTeX)
+   /CreationDate (D:20051023215500)
+   /ModDate (D:\pdfdate)
+   /Subject (LaTeX)
+   /Keywords (LaTeX;thesis;guide)
+}
+
+\else
+\RequirePackage{url}
+\DeclareGraphicsExtensions{.ps,.eps}
+\fi
+
+\newif\ifscreen
+
+\screentrue
+\ifpdf\InputIfFileExists{switch}{}{}\fi
+
+% create a new page style that has a navigation bar in the footer
+
+\newif\iflastpg
+\lastpgfalse
+
+\newcommand\ps@online{
+\renewcommand{\@oddhead}{}
+\renewcommand{\@evenhead}{}
+\renewcommand{\@oddfoot}{\hfill
+   \ifthenelse{\equal{\thepage}{a}}{\textcolor[gray]{.75}{Trước}}{\Acrobatmenu{PrevPage}{Trước}}
+   \ifthenelse{\boolean{lastpg}}{\textcolor[gray]{.75}{Sau}}{\Acrobatmenu{NextPage}{Sau}}
+   \Acrobatmenu{FirstPage}{Đầu}
+   \Acrobatmenu{LastPage}{Cuối}
+   \Acrobatmenu{GoBack}{Trở lại}
+   \Acrobatmenu{GoForward}{Tới}
+   \hyperref[hyper][ch:index]{Chỉ mục}\hfill\thepage}
+\renewcommand{\@evenfoot}{\@oddfoot}}
+
+\ifscreen
+\RequirePackage[paperwidth=8in,paperheight=6in,top=0.75in,textheight=4.8in]{geometry}
+
+\hypersetup{pdfpagelayout=SinglePage,pdfpagemode=None}
+\pagestyle{online}
+\renewcommand{\@makechapterhead}[1]{%
+  {\parindent \z@ \raggedright \normalfont
+    \hrule                                        % horizontal line
+    \vspace{10pt}%                                 % add vertical space
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\scshape \thechapter\space % Chapter number
+    \fi
+    \huge\scshape #1\par                         % chapter title
+    \vspace{10pt}%                                 % add vertical space
+    \hrule                                        % horizontal rule
+    \nobreak
+    \vskip 20\p@
+  }}
+
+\renewcommand{\@makeschapterhead}[1]{%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \hrule                                        % horizontal line
+    \vspace{10pt}%                                 % add vertical space
+    \huge \scshape #1\par                         % chapter title
+    \vspace{10pt}%                                 % add vertical space
+    \hrule                                        % horizontal line
+   \nobreak
+   \vskip 20\p@
+  }}
+
+% chapters use \thispagestyle{plain} for the first page
+% this is a quick fix
+\let\ps@plain=\ps@online
+\let\ps@empty=\ps@online
+\fi
+
+% renew theindex environment so that it appears in the table of contents 
+
+\renewenvironment{theindex}
+               {\if@twocolumn
+                  \@restonecolfalse
+                \else
+                  \@restonecoltrue
+                \fi
+                \columnseprule \z@
+                \columnsep 35\p@
+                \twocolumn
+                \chapter*{\indexname}%
+                \@mkboth{\MakeUppercase\indexname}%
+                        {\MakeUppercase\indexname}%
+                \label{ch:index}\addcontentsline{toc}{chapter}{\indexname}\parindent\z@
+                \parskip\z@ \@plus .3\p@\relax
+                \let\item\@idxitem}
+               {\lastpgtrue\if@restonecol\onecolumn\else\clearpage\fi}
+
+\endinput
