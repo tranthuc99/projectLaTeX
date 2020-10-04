@@ -412,7 +412,7 @@ seidel_iterative_method (a[][], result[][], n, k)
             result[i][h] = result[i][0]
             for j = 1 to i-1
                 result[i][h] += a[i][j] * result[j][h]
-            for t = i to n
+            while t = i to n
                 result[i][h] += a[i][t] * result[t][h-1]
 \end{lstlisting}
 \caption{Phương pháp lặp Seidel}

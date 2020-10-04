@@ -1,0 +1,12 @@
+\beamer@sectionintoc {1}{Đặt vấn đề}{3}{0}{1}
+\beamer@sectionintoc {2}{Tổng quan về năng suất}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Khái niệm}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Phân loại năng suất}{5}{0}{2}
+\beamer@sectionintoc {3}{Đánh giá năng suất}{6}{0}{3}
+\beamer@subsectionintoc {3}{1}{Các nhân tố tác động đến năng suất}{6}{0}{3}
+\beamer@subsectionintoc {3}{2}{Bản chất và tầm quan trọng của năng suất trong sản xuất và dịch vụ}{7}{0}{3}
+\beamer@subsectionintoc {3}{3}{Những biện pháp nhằm nâng cao năng suất trong quản trị sản xuất}{8}{0}{3}
+\beamer@sectionintoc {4}{Lựa chọn năng suất}{10}{0}{4}
+\beamer@subsectionintoc {4}{1}{Subsection 1}{10}{0}{4}
+\beamer@subsectionintoc {4}{2}{Subsection 2}{11}{0}{4}
+\beamer@subsectionintoc {4}{3}{Subsection 3}{14}{0}{4}

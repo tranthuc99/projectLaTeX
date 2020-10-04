@@ -1,0 +1,76 @@
+\documentclass[12pt,twoside]{report2}
+\usepackage[a4paper,width=15cm,top=2cm,bottom=2cm,bindingoffset=14mm]{geometry}
+
+\usepackage[utf8]{vietnam}
+\usepackage{lipsum}
+%\usepackage{showframe}
+
+\usepackage{scrextend}
+\changefontsizes[16pt]{14pt}
+
+\usepackage{mathptmx}
+
+\usepackage{bkthesis}
+
+
+\usepackage[nottoc]{tocbibind}
+%--------------------------------------
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[colorlinks=true,breaklinks]{hyperref}
+
+\usepackage{xcolor}
+\definecolor{c1}{rgb}{0.81, 0.09, 0.13}
+\definecolor{c2}{rgb}{0,0.3,0.9}
+\definecolor{c3}{rgb}{0.3,0,0.9}
+\hypersetup{
+    linkcolor={c1},
+    citecolor={c2},
+    urlcolor={c3}
+}
+\usepackage{graphicx}
+%--------------------------------------
+
+\usepackage{fancyhdr}
+\fancyhf{}
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhead[LE,RO]{{\normalsize \thepage}}
+\fancyhead[LO]{\textbf{Nhóm 3}}
+\fancyhead[RE]{\textbf{Suy luận thống kê}}
+\fancyfoot[CE,CO]{{\normalsize \thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\headheight}{0.5pt}
+
+\usepackage{tocloft,calc}
+%\renewcommand{\cftchappresnum}{Chương }
+%\AtBeginDocument{\addtolength\cftchapnumwidth{\widthof{\bfseries Chương }}}
+
+\begin{document}
+\coverpage
+
+\pagenumbering{roman}
+
+\tableofcontents
+\par\vfil\null\endtitlepage
+\listoffigures
+\par\vfil\null\endtitlepage
+\listoftables
+\par\vfil\null\endtitlepage
+\par\vfil\null\endtitlepage
+
+\pagestyle{fancy}
+\input{contents/chapter1}
+\input{contents/chapter2}
+\input{contents/chapter3}
+
+
+
+xzx \textit{et. al.}\cite{knuthwebsite,vu2016histopathological}
+ấds \cite{einstein,vu2015dfdl}
+\bibliographystyle{IEEEtran}
+\bibliography{literature/refs}
+
+\end{document}
